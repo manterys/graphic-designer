@@ -310,6 +310,9 @@ to {
     transform: rotate(45deg) translateY(-5px) translateX(-5px);
 }
 
+.icons {
+    width: 20vw;
+}
 /* Navigation */
 .nav {
     position: fixed;
