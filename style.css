@@ -172,13 +172,7 @@ img {
     }
 }
 
-.star {
-    width: auto;
-}
 
-.port {
-    width: 50%;
-}
 .loader p {
     font-size: 8vw;
     color: var(--gray-90);
