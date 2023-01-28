@@ -445,18 +445,18 @@ h2 {
 .footer {
     padding: 0 var(--space-0_5);
 }
-.footer a {
-    text-transform: uppercase;
-    color: var(--black);
-    font-size: clamp(2rem, 10vw, 15rem);
-    font-weight: var(--fw-thin);
+.footer .container {
+    display: flex;
 }
-.footer-content svg {
-    width: 30vw;
-    max-width: 20rem;
-    height: auto;
-    margin: 1rem 0;
+.social-icon {
+    display: flex;
+    background: cyan;
 }
+
+.social-icon img {
+    width: 50px;
+}
+
 /* Media Footer */
 @media screen and (min-width: 720px) {
     .footer {
