@@ -259,37 +259,39 @@ h2 {
     /* color: red; */
 }
 
-
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.border {
+    width: 100%;
+    height: 1px;
+    background: var(--white);
+}
 
 /* Header */
 .header {
     position: fixed;
     top: 0;
-    /* left: 50%; */
     left: 0;
     display: flex;
     justify-content: center;
-    /* justify-content: space-between; */
     width: 100%;
-    /* max-width: 1600px; */
-    /* transform: translateX(-50%); */
     z-index: 9;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    /* background: rgb(53, 53, 53); */
+    /* background: cyan; */
 }
-
 .header .container {
     display: flex;
-    /* background: cyan; */
-    width: 100%;
     justify-content: space-between;
-    max-width: 1600px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    /* background: cyan; */
 }
 /* Logo */
-.logo img {
+.logo img.geometric-shape {
     width: 50px;
 }
 
@@ -412,10 +414,7 @@ h2 {
     background: cyan;
     /* background: red; */
 }
-.bg {
-    /* width: 100%; */
-    /* height: auto; */
-}
+
 
 /* Projects */
 .projects {
@@ -428,11 +427,27 @@ h2 {
     gap: 1rem;
 }
 
+@media screen and (min-width: 900px) {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .projects img:first-child {
+        grid-column: 1/3;
+    }
+    .projects img:nth-child(2) {
+        grid-column: 3/5;
+    }
+}
+
 .award {
     /* background: cyan; */
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
+}
+
+.award .geometric-shape {
+    width: 20px;
 }
 .content p {
     display: flex;
@@ -443,26 +458,44 @@ h2 {
 
 /* Footer */
 .footer {
-    padding: 0 var(--space-0_5);
+    background: red;
+    /* padding: 0 var(--space-0_5); */
 }
 .footer .container {
     display: flex;
-}
-.social-icon {
-    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: cyan;
 }
 
+.footer .geometric-shape {
+    width: auto;
+    height: 50px;
+    /* background: red; */
+}
+/* !!!!!!!!!!!!!!! */
+.social-icon {
+    display: flex;
+    /* background: cyan; */
+}
+.social-icon a {
+    margin-left: 1rem;
+    /* background: cyan; */
+}
+.social-icon a:first-child {
+    height: 10px;
+}
 .social-icon img {
-    width: 50px;
+    height: 30px;
+    width: auto;
 }
 
 /* Media Footer */
-@media screen and (min-width: 720px) {
+/* @media screen and (min-width: 720px) {
     .footer {
         padding: 0 var(--space-1);
     }
-}
+} */
 
 /* Copyright */
 .copyright {
