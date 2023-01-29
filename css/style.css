@@ -191,7 +191,7 @@ h2 {
     margin-bottom: var(--space-1_5)
 }
 .about-me .text-content {
-    background: url(images/person.png) no-repeat right center / cover;
+    background: url(../images/person.png) no-repeat right center / cover;
     background-size: contain;
     width: 90%;
     padding-bottom: var(--space-1_5);
