@@ -70,7 +70,8 @@ html, body {
     overflow-x: hidden;
     color: var(--white);
     letter-spacing: 1px;
-    transition: background-color 1s ease;
+    /* transition: background-color 1s ease; */
+    /* transition: all 1s ease; */
 }
 body {
     background-color: var(--black);
@@ -99,7 +100,6 @@ img {
     padding-right: var(--space-0_5);
     transition: var(--transition-0_3);
 }
-
 
 /* Animation Text */
 .anim-container {
@@ -243,13 +243,14 @@ to {
 /* TYPOGRAPHY */
 h1 {
     font-family: var(--font-1);
-    font-size: clamp(4rem, 10vw, 10rem);
+    font-size: clamp(4rem, 10vw, 8rem);
     letter-spacing: -2px;
+    /* margin-top: 3rem; */
 }
 h2 {
     font-family: var(--font-2);
-    /* font-size: clamp(2rem, 5vw, 4rem); */
-    font-size: 1.5rem;
+    font-size: clamp(2rem, 5vw, 4rem);
+    /* font-size: 3rem; */
 }
 .lead{
     font-family: var(--font-2);
@@ -261,11 +262,17 @@ h2 {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    /* background: rgb(27, 27, 27); */
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
+/* @media screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+    }
+} */
 .border {
     width: 100%;
     height: 1px;
@@ -307,12 +314,29 @@ h2 {
     justify-content: center;
 }
 .nav ul li {
-    margin-left: 2rem;
+    transition: all 1s ease;
+    margin-left: 5rem;
 }
 .nav ul li a {
-    /* font-size: 3rem; */
+    transition: all 1s ease;
+    font-size: 2.2rem;
 }
-
+@media screen and (max-width:660px) {
+    .nav ul li {
+        margin-left: 3rem;
+    }
+    .nav ul li a {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width:480px) {
+    .nav ul li {
+        margin-left: 2rem;
+    }
+    .nav ul li a {
+        font-size: 1.4rem;
+    }
+}
 
 
 /* Media Nav Landscape Only Mobile Devices */
@@ -325,29 +349,38 @@ h2 {
 
 /* Landing Page */
 .landing-page {
-    /* min-height: 700px; */
+    min-height: 800px;
     height: 100vh;
-    margin-top: var(--space-2);
+    margin-top: 5rem;
     /* background: red; */
 }
-
 .landing-page .container {
-    /* background: cyan; */
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+h1 {
+    line-height: .9;
+}
+h2 {
+    margin-bottom: 3rem;
+}
+.landing-page .geometric-shape {
+    width: 50px;
+    margin-left: 5rem;
 }
 
-.experiences {
-    /* background: cyan; */
+.experience-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding: 0 2rem;
+    margin-top: 5rem;
+    gap: 10rem;
+    transition: all 1s ease;
+    /* padding: 0 2rem; */
     /* align-items: center; */
+    /* background: cyan; */
 }
 .experience {
     display: flex;
@@ -355,43 +388,58 @@ h2 {
     justify-content: center;
     align-items: center;
     position: relative;
-    /* background: blue; */
-
     border-radius: 50%;
     border: 2px solid var(--white);
     border-right: 2px solid var(--black);
-    width: 180px;
-    height: 180px;
-}
-.experience:first-child {
-    align-self: flex-end;
-    transform: translateY(20px);
-}
-.experience::after {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    /* top: 10px; */
-    /* left: 0; */
-    /* background: red; */
-
-    /* border-right: 2px solid red; */
+    width: 350px;
+    height: 350px;
+    transition: all 1s ease;
 }
 .experience span {
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     line-height: 1.2;
+    transition: font-size 1s ease;
+    /* background: cyan; */
 }
-@media screen and (orientation: landscape) and (hover: none){
-    .showcase {
-        height: 100%;
+@media screen and (max-width:860px) {
+    .experience-container {
+        gap: 3rem;
+    }
+    .experience {
+        width: 260px;
+        height: 260px;
+    }
+    .experience span {
+        font-size: 2.4rem;
+        line-height: 1.2;
     }
 }
-@media screen and (min-width: 800px){
-    .showcase {
-        height: 100%;
+@media screen and (max-width:680px) {
+    .landing-page {
+        /* min-height: auto; */
+        /* height: 100vh; */
+    }
+    .experience-container {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .experience:first-child {
+        align-self: flex-end;
+        /* transform: translateY(20px); */
+    }
+}
+@media screen and (max-width:480px) {
+    .experience-container {
+        gap: 0rem;
+    }
+    .experience {
+        width: 200px;
+        height: 200px;
+    }
+    .experience span {
+        font-size: 1.6rem;
     }
 }
 
@@ -402,16 +450,26 @@ h2 {
     /* background: url(images/person.png) no-repeat center center / cover; */
     /* background: cyan; */
 }
-.about-me .content {
+.about-me .text-content {
     width: 100%;
 }
+.about-me h3 {
+    /* background: cyan; */
+    position: relative;
+}
 
-.about-me img {
+.about-me .geometric-shape {
+    width: 30px;
+    position: absolute;
+    right: 0;
+}
+
+.about-me img.person {
     /* position: absolute; */
     /* top: -20px; */
     right: 0;
     width: 50%;
-    background: cyan;
+    /* background: cyan; */
     /* background: red; */
 }
 
