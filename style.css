@@ -1,9 +1,9 @@
 /* https://fonts.google.com/ */
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa&family=Prata&display=swap');
 
 :root {
     /* Font Family */
-    --font-1: 'Lora', serif;
+    --font-1: 'Changa', sans-serif;
     --font-2: 'Prata', serif;
     /* Font Weight */
     /* --fw-thin: 100; */
@@ -398,7 +398,7 @@ h2 {
 .experience span {
     font-size: 3rem;
     text-align: center;
-    line-height: 1.2;
+    line-height: 2;
     transition: font-size 1s ease;
     /* background: cyan; */
 }
