@@ -26,7 +26,7 @@ const appMoveTo = () => {
     const triggers = document.querySelectorAll('.smoothscroll')
 
     const moveTo = new MoveTo({
-        tolerance: 30,
+        tolerance: 88,
         duration: 1200,
         easing: 'easeInOutCubic',
         container: window
