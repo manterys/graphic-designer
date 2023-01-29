@@ -1,0 +1,118 @@
+/* https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Changa&family=Prata&display=swap');
+
+:root {
+    /* Font Family */
+    --font-1: 'Changa', sans-serif;
+    --font-2: 'Prata', serif;
+
+    /* Font Weight */
+    --fw-regular: 400;
+
+    /* Font Size */
+    --font-scale-ratio: 1;
+    --fs-basic: calc(14px * var(--font-scale-ratio));
+
+    --fs-xsm: calc(.7 * var(--fs-basic));
+    --fs-sm: calc(.8 * var(--fs-basic));
+    --fs: var(--fs-basic);
+    --fs-md: calc(1.2 * var(--fs-basic));
+    --fs-lg: calc(1.6 * var(--fs-basic));
+    --fs-xlg: calc(2.2 * var(--fs-basic));
+    --fs-xxlg: calc(2.8 * var(--fs-basic));
+    --fs-display-1: calc(4 * var(--fs-basic));
+    --fs-display-2: calc(5 * var(--fs-basic));
+    --fs-display-3: calc(6 * var(--fs-basic));
+
+    /* Colors */
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 92%);
+    --hover-color: rgb(243, 30, 30);
+
+    /* Space */
+    --space-scale-ratio: 1;
+    --space: calc(3rem * var(--space-scale-ratio));
+
+    --space-0_25: calc(0.25 * var(--space));
+    --space-0_5: calc(0.5 * var(--space));
+    --space-0_75: calc(0.75 * var(--space));
+    --space-1: var(--space);
+    --space-1_5: calc(1.5 * var(--space));
+    --space-2: calc(2 * var(--space));
+    --space-2_5: calc(2.5 * var(--space));
+    --space-3: calc(3 * var(--space));
+    --space-3_5: calc(3.5 * var(--space));
+    --space-4: calc(4 * var(--space));
+
+    /* Transition */
+    --transition-0_3: all 0.3s ease;
+}
+
+/* Base style */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    /* font-size: 12px; */
+    font-family: var(--font-1);
+    font-weight: var(--fw-regular);
+    line-height: 1.2;
+    overflow-x: hidden;
+    color: var(--white);
+    letter-spacing: 1px;
+    /* transition: background-color 1s ease; */
+    /* transition: all 1s ease; */
+}
+body {
+    background-color: var(--black);
+}
+html {
+    height: 100%;
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+a:hover {
+    color: var(--hover-color);
+}
+img {
+    width: 100%;
+}
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    /* background: rgb(27, 27, 27); */
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+@media screen and (max-width: 700px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Animation Text */
+.anim-container {
+    overflow: hidden;
+}
+.anim-text-top {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.8s ease;
+}
+.showText {
+    transform: translateY(0);
+}
+.about .anim-container, .projects .anim-container {
+    margin-bottom: var(--space-1_5);
+}

@@ -1,120 +1,4 @@
-/* https://fonts.google.com/ */
-@import url('https://fonts.googleapis.com/css2?family=Changa&family=Prata&display=swap');
 
-:root {
-    /* Font Family */
-    --font-1: 'Changa', sans-serif;
-    --font-2: 'Prata', serif;
-
-    /* Font Weight */
-    --fw-regular: 400;
-
-    /* Font Size */
-    --font-scale-ratio: 1;
-    --fs-basic: calc(14px * var(--font-scale-ratio));
-
-    --fs-xsm: calc(.7 * var(--fs-basic));
-    --fs-sm: calc(.8 * var(--fs-basic));
-    --fs: var(--fs-basic);
-    --fs-md: calc(1.2 * var(--fs-basic));
-    --fs-lg: calc(1.6 * var(--fs-basic));
-    --fs-xlg: calc(2.2 * var(--fs-basic));
-    --fs-xxlg: calc(2.8 * var(--fs-basic));
-    --fs-display-1: calc(4 * var(--fs-basic));
-    --fs-display-2: calc(5 * var(--fs-basic));
-    --fs-display-3: calc(6 * var(--fs-basic));
-
-    /* Colors */
-    --black: hsl(0, 0%, 0%);
-    --white: hsl(0, 0%, 92%);
-    --hover-color: rgb(243, 30, 30);
-
-    /* Space */
-    --space-scale-ratio: 1;
-    --space: calc(3rem * var(--space-scale-ratio));
-
-    --space-0_25: calc(0.25 * var(--space));
-    --space-0_5: calc(0.5 * var(--space));
-    --space-0_75: calc(0.75 * var(--space));
-    --space-1: var(--space);
-    --space-1_5: calc(1.5 * var(--space));
-    --space-2: calc(2 * var(--space));
-    --space-2_5: calc(2.5 * var(--space));
-    --space-3: calc(3 * var(--space));
-    --space-3_5: calc(3.5 * var(--space));
-    --space-4: calc(4 * var(--space));
-
-    /* Transition */
-    --transition-0_3: all 0.3s ease;
-}
-
-/* Base style */
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html, body {
-    font-size: 12px;
-    font-family: var(--font-1);
-    font-weight: var(--fw-regular);
-    line-height: 1.2;
-    overflow-x: hidden;
-    color: var(--white);
-    letter-spacing: 1px;
-    /* transition: background-color 1s ease; */
-    /* transition: all 1s ease; */
-}
-body {
-    background-color: var(--black);
-}
-html {
-    height: 100%;
-}
-ul, ol, li {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-    color: var(--white);
-}
-a:hover {
-    color: var(--hover-color);
-}
-img {
-    width: 100%;
-}
-.container {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    /* background: rgb(27, 27, 27); */
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-/* @media screen and (max-width: 700px) {
-    .container {
-        width: 100%;
-    }
-} */
-
-/* Animation Text */
-.anim-container {
-    overflow: hidden;
-}
-.anim-text-top {
-    display: inline-block;
-    transform: translateY(100%);
-    transition: transform 0.8s ease;
-}
-.showText {
-    transform: translateY(0);
-}
-.about .anim-container, .projects .anim-container {
-    margin-bottom: var(--space-1_5);
-}
 
 /* Page */
 .page {
@@ -242,23 +126,23 @@ to {
 /* TYPOGRAPHY */
 h1 {
     font-family: var(--font-1);
-    font-size: clamp(4rem, 10vw, 8rem);
+    font-size: clamp(2.6rem, 10vw, 6rem);
     letter-spacing: -2px;
+    /* background: cyan; */
     /* margin-top: 3rem; */
 }
 h2 {
     font-family: var(--font-2);
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1.2rem, 5vw, 2rem);
     /* font-size: 3rem; */
 }
 h3 {
     font-size: 2rem;
-    margin-bottom: 2rem;
 }
 .lead{
     font-family: var(--font-2);
     letter-spacing: 1px;
-    font-size: 2.2rem;
+    font-size: var(--fs-xlg)
     /* max-width: 80%; */
     /* color: red; */
 }
@@ -287,6 +171,13 @@ h3 {
     padding-bottom: 2rem;
     /* background: cyan; */
 }
+@media screen and (max-width: 640px) {
+    .header .container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
 /* Logo */
 .logo img.geometric-shape {
     width: 50px;
@@ -294,7 +185,6 @@ h3 {
 
 /* Navigation */
 .nav {
-    /* background: cyan; */
     align-self: center;
 }
 .nav ul {
@@ -305,43 +195,26 @@ h3 {
 }
 .nav ul li {
     transition: all 1s ease;
-    margin-left: 5rem;
+    margin-left: 4rem;
 }
 .nav ul li a {
     transition: all 1s ease;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 @media screen and (max-width:660px) {
     .nav ul li {
-        margin-left: 3rem;
+        margin-left: 1rem;
     }
     .nav ul li a {
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 }
-@media screen and (max-width:480px) {
-    .nav ul li {
-        margin-left: 2rem;
-    }
-    .nav ul li a {
-        font-size: 1.4rem;
-    }
-}
-
-
-/* Media Nav Landscape Only Mobile Devices */
-@media screen and (orientation: landscape) and (hover: none){
-}
-/* Media Nav */
-@media screen and (min-width: 801px) {
-}
-
 
 /* Landing Page */
 .landing-page {
-    min-height: 800px;
+    min-height: 700px;
     height: 100vh;
-    margin-top: 5rem;
+    padding-top: 5rem;
     /* background: red; */
 }
 .landing-page .container {
@@ -349,24 +222,30 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* background: cyan; */
+}
+.landing-page .text-content{
+    margin-bottom: 3rem;
 }
 h1 {
     line-height: .9;
 }
 h2 {
-    margin-bottom: 3rem;
+    position: relative;
 }
 .landing-page .geometric-shape {
+    position: absolute;
     width: 50px;
-    margin-left: 5rem;
+    transform: translateX(50px);
+    /* margin-left: 2rem; */
 }
 
 .experience-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
-    gap: 10rem;
+    /* margin-top: 5rem; */
+    gap: 6rem;
     transition: all 1s ease;
     /* padding: 0 2rem; */
     /* align-items: center; */
@@ -383,16 +262,20 @@ h2 {
     border-right: 2px solid var(--black);
     width: 350px;
     height: 350px;
-    transition: all 1s ease;
+    transition: width 1s ease, height 1s ease;
 }
 .experience span {
-    font-size: 3rem;
+    font-size: 2.6rem;
     text-align: center;
-    line-height: 2;
+    /* line-height: 2; */
     transition: font-size 1s ease;
     /* background: cyan; */
 }
 @media screen and (max-width:860px) {
+    .landing-page {
+        min-height: 100%;
+        /* height: 100vh; */
+    }
     .experience-container {
         gap: 3rem;
     }
@@ -406,23 +289,20 @@ h2 {
     }
 }
 @media screen and (max-width:680px) {
-    .landing-page {
-        /* min-height: auto; */
-        /* height: 100vh; */
+    
+    .landing-page .geometric-shape {
+        transform: translateX(0px);
+        /* width: 50px; */
+        margin-left: 1rem;
     }
     .experience-container {
         flex-direction: column;
-        width: 80%;
+        gap: 0;
+        width: 70%;
         margin: 0 auto;
     }
     .experience:first-child {
         align-self: flex-end;
-        /* transform: translateY(20px); */
-    }
-}
-@media screen and (max-width:480px) {
-    .experience-container {
-        gap: 0rem;
     }
     .experience {
         width: 200px;
@@ -432,44 +312,56 @@ h2 {
         font-size: 1.6rem;
     }
 }
+@media screen and (max-width:480px) {
+    .experience-container {
+        width: 100%;
+    }
+}
 
 /* About Me*/
-.about-me .container{
-    display: flex;
+.about-me {
+    margin-bottom: var(--space-1_5)
+    /* background: cyan; */
 }
 .about-me .text-content {
-    width: 100%;
+    background: url(images/person.png) no-repeat right center / cover;
+    background-size: contain;
+    width: 90%;
+    /* margin-top: var(--space-1); */
+    padding-bottom: var(--space-1_5);
 }
 .about-me h3 {
+    margin-top: var(--space-1_5);
+    margin-bottom: var(--space-1_5);
     /* background: cyan; */
-    position: relative;
+    /* position: relative; */
+}
+.lead {
+    width: 70%;
+    /* background: cyan; */
 }
 
 .about-me .geometric-shape {
     width: 30px;
-    position: absolute;
-    right: 0;
-}
-
-.about-me img.person {
+    margin-left: 3rem;
     /* position: absolute; */
-    /* top: -20px; */
-    right: 0;
-    width: 50%;
-    /* background: cyan; */
-    /* background: red; */
+    /* left: 50%; */
 }
 
 /* Projects */
 .projects {
-    padding-top: var(--space-1_5);
-    padding-bottom: var(--space-1_5);
+    /* padding-top: var(--space-1_5); */
+    padding-bottom: var(--space-2);
+}
+.portfolio h3 {
+    margin-bottom: var(--space-1_5);
 }
 .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
+
 
 @media screen and (min-width: 900px) {
     .projects {
@@ -484,6 +376,13 @@ h2 {
 }
 
 /* Awards & Contact */
+.awards h3 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+.awards .text-content {
+    margin-bottom: var(--space-2);
+}
 .awards .text-content p, .contact .text-content span {
     display: flex;
     justify-content: space-between;
@@ -495,6 +394,11 @@ h2 {
 }
 .awards .geometric-shape {
     width: 20px;
+    margin-left: 1rem;
+}
+.contact h3 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
 }
 
 /* Footer */
@@ -593,9 +497,9 @@ h2 {
 }
 
 /* Media Root */
-/* @media screen and (min-width: 720px) {
+@media screen and (max-width: 640px) {
     :root{
         --font-scale-ratio: 1.2;
-        --space-scale-ratio: 2;
+        --space-scale-ratio: .6;
     }
-} */
+}
