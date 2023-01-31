@@ -36,6 +36,45 @@ h3 {
     font-size: var(--fs-xlg)
 }
 
+/* Loader */
+.loader {
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: var(--black);
+    transition: all 1s ease;
+}
+.loader img {
+    width: 40px;
+    margin-bottom: 3rem;
+    animation: loader 1.6s linear infinite;
+}
+.loader.loaded {
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+@keyframes loader {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Page */
+.page {
+    opacity: 0;
+}
+.page.loaded {
+    background: var(--black);
+    opacity: 1;
+    transition: opacity 3s ease 2s;
+}
+
 /* Header */
 .header {
     position: fixed;
@@ -86,7 +125,7 @@ h3 {
         margin-left: 1rem;
     }
     .nav ul li a {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 }
 

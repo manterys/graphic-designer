@@ -1,3 +1,23 @@
+// Loader
+const appLoader = function() {
+
+    const page = document.querySelector('.page');
+    const overlay = document.querySelector('.overlay');
+    const loader = document.querySelector('.loader');
+    
+    window.addEventListener('load', function() {
+       
+        loader.classList.add('loaded')
+        page.classList.add('loaded')
+            setTimeout(() => {
+                        loader.style.display = 'none'
+                        overlay.classList.add('anim')
+                    }, 500)
+    })
+}
+
+appLoader()
+
 // Move to
 const appMoveTo = () => {
     const easeFunctions = {
