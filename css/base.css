@@ -1,4 +1,4 @@
-/* https://fonts.google.com/ */
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Changa&family=Prata&display=swap');
 
 :root {
@@ -84,34 +84,21 @@ img {
     width: 100%;
 }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+.container {
     width: 100%;
-    height: 0;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+@media screen and (max-width: 660px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+.border {
+    width: 100%;
+    height: 1px;
     background: var(--white);
-    /* transition: height .8s ease; */
-}
-.overlay.anim {
-    animation: top 1.2s ease;
-}
-/* .overlay:after {
-    content:'';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background: cyan;
-    animation: top .8s ease 1s;
-    animation-fill-mode: forwards;
-} */
-@keyframes top {
-    50% {
-        height: 100%;
-    }
-    100% {
-        height: 0%;
-    }
 }
