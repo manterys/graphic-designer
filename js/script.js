@@ -18,6 +18,26 @@ const appLoader = function() {
 }
 appLoader()
 
+// Animation
+const appAnimation = () => {
+    const animationTop = document.querySelectorAll('.animation-top')
+
+    window.addEventListener('scroll', animation)
+
+    function animation() {
+    const triggerBottom = window.innerHeight / 1.1
+    
+    animationTop.forEach(animationTopEl => {
+        const animTop = animationTopEl.getBoundingClientRect().top
+
+        if(animTop < triggerBottom) {
+            animationTopEl.classList.add('animationShow')
+        } 
+    })
+    }
+}
+appAnimation()
+
 // Move to
 const appMoveTo = () => {
     const easeFunctions = {

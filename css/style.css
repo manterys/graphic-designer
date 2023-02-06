@@ -28,7 +28,7 @@ h3 {
     left: 0;
     height: 100vh;
     width: 100%;
-    background: var(--black);
+    background-color: var(--black);
     transition: all 1s ease;
 }
 .loader img {
@@ -72,13 +72,14 @@ h3 {
     opacity: 0;
 }
 .page.loaded {
-    background: var(--black);
+    background-color: var(--black);
     opacity: 1;
     transition: opacity 2s ease 1.2s;
 }
 
 /* Header */
 .header {
+    background-color: var(--black);
     position: fixed;
     top: 0;
     left: 0;
@@ -90,14 +91,8 @@ h3 {
 .header .container {
     display: flex;
     justify-content: space-between;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-@media screen and (max-width: 660px) {
-    .header .container {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* Logo */
@@ -115,12 +110,12 @@ h3 {
     justify-content: center;
 }
 .nav ul li {
-    transition: all 1s ease;
+    transition: margin-left .4s ease;
     margin-left: 4rem;
 }
 .nav ul li a {
-    transition: all 1s ease;
-    font-size: 1.8rem;
+    transition: all .4s ease;
+    font-size: 1.2rem;
 }
 @media screen and (max-width:660px) {
     .nav ul li {

@@ -102,3 +102,24 @@ img {
     height: 1px;
     background: var(--white);
 }
+
+/* Animation */
+.animation-top, .animation-hero {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform .8s ease, opacity .8s ease;
+}
+.animation-hero {
+    transition-delay: 1.4s;
+}
+.animation-hero:nth-child(2) {
+    transition-delay: 1.6s;
+}
+.animationShow {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.page.loaded .animation-hero {
+    opacity: 1;
+    transform: translateY(0px);
+}
