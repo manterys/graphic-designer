@@ -9,3 +9,6 @@ Fonts:
 Javascript Files:
  - MoveTo.js (https://github.com/hsnaydd/moveTo)
  - Glithbox (https://github.com/biati-digital/glightbox)
+
+MIT license
+Graphic-Designer is free to use for personal and commercial projects. 
