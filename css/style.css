@@ -131,19 +131,19 @@ h3 {
     }
 }
 
-/* Landing Page */
-.landing-page {
+/* Hero */
+.hero {
     min-height: 700px;
     height: 100vh;
     padding-top: 5rem;
 }
-.landing-page .container {
+.hero .container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.landing-page .text-content{
+.hero .text-content{
     margin-bottom: 3rem;
 }
 h1 {
@@ -152,7 +152,7 @@ h1 {
 h2 {
     position: relative;
 }
-.landing-page .geometric-shape {
+.hero .geometric-shape {
     position: absolute;
     width: 50px;
     transform: translateX(50px);
@@ -332,9 +332,15 @@ h2 {
 .social-icon img {
     height: 40px;
     width: auto;
+    transition: transform .4s ease;
 }
 .social-icon a:first-child img{
     height: 30px;
+}
+@media screen and (hover:hover) {
+    .social-icon a:hover img{
+        transform: translateY(-5px);
+    }
 }
 @media screen and (max-width: 900px) {
     .footer .geometric-shape {
