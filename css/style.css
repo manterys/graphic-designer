@@ -38,7 +38,7 @@ h3 {
 }
 .loader.loaded {
     opacity: 0;
-    transition: opacity .5s ease;
+    transition: opacity 1s ease;
 }
 @keyframes loader {
     to {
@@ -74,7 +74,7 @@ h3 {
 .page.loaded {
     background: var(--black);
     opacity: 1;
-    transition: opacity 8s ease 1.5s;
+    transition: opacity 2s ease 1.2s;
 }
 
 /* Header */
@@ -266,6 +266,9 @@ h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+}
+.projects img {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 900px) {

@@ -8,14 +8,14 @@ const appLoader = function() {
     window.addEventListener('load', function() {
        
         loader.classList.add('loaded')
-        page.classList.add('loaded')
-            setTimeout(() => {
-                        loader.style.display = 'none'
-                        overlay.classList.add('anim')
-                    }, 500)
+
+        loader.addEventListener('transitionend', function() {
+            page.classList.add('loaded')
+            loader.style.display = 'none'
+            overlay.classList.add('anim')
+        })
     })
 }
-
 appLoader()
 
 // Move to
@@ -56,5 +56,14 @@ const appMoveTo = () => {
         moveTo.registerTrigger(trigger)
     })
 }
-
 appMoveTo()
+
+// Glightbox
+const appGlightbox = () => {
+    const lightbox = GLightbox({
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+    })
+}
+appGlightbox()
