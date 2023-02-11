@@ -1,3 +1,7 @@
+AOS.init({
+    duration: 1000,
+})
+
 // Loader
 const appLoader = function() {
 
@@ -34,6 +38,7 @@ const appAnimation = () => {
             animationTopEl.classList.add('animationShow')
         } 
     })
+
     }
 }
 appAnimation()

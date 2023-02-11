@@ -69,6 +69,10 @@ img {
 }
 
 /* Animation */
+.animationShow {
+    opacity: 1;
+    transform: translateY(0px);
+}
 .animation-top, .animation-hero {
     opacity: 0;
     transform: translateY(100px);

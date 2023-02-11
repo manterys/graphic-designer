@@ -181,13 +181,16 @@ h2 {
 
 /* About Me*/
 .about-me {
-    margin-top: var(--space-2);
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-1_5);
 }
 .about-me .text-content {
     width: 90%;
 }
 @media screen and (min-width: 660px) {
+    .about-me {
+        margin-top: var(--space-3);
+        margin-bottom: var(--space-2);
+    }
     .about-me .text-content {
         background: url(../images/person.png) no-repeat right center / cover;
         background-size: contain;
